@@ -1,3 +1,10 @@
+:root {
+    --brand-color: #93cb52;
+    --white: #fff;
+    --dark-grey: #333;
+    --black: #000;
+}
+
 /* Base Styles */
 
 * {
@@ -8,6 +15,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
 }
 
 a {
@@ -25,9 +33,39 @@ ul {
 /* Utility Classes */
 
 .text-primary {
-    color: #93cb52;
+    color: var(--brand-color);
 }
 
+.large-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px var(--black);
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px var(--black);
+}
+
+.btn {
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--brand-color);
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: #7ab436;
+}
+
+.btn-dark {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
 
 /* Nav Bar */
 
@@ -36,8 +74,8 @@ ul {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-grey);
+    color: var(--white);
     z-index: 777;
     padding: 1rem;
 }
@@ -48,7 +86,7 @@ ul {
 }
 
 #navbar ul li a {
-    color: #fff;
+    color: var(--white);
     padding: 0.75rem;
     margin: 0 0.25rem;
     border-radius: 8px;
@@ -56,22 +94,27 @@ ul {
 }
 
 #navbar ul li a:hover {
-    background-color: #93cb52;
-    color: #333;
+    background-color: var(--brand-color);
+    color: var(--dark-grey);
 }
 
 /* Show Case */
 
 #showcase {
-    background: linear-gradient(rgba(51, 51, 51, 0.377), rgba(51, 51, 51, 0.432)), url(/EdgeLedger/img/showcase.jpg);
+    background: linear-gradient(rgba(8, 8, 8, 0.527), rgba(0, 0, 0, 0.527)), url(/img/showcase.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    color: #fff;
+    height: 80vh;
+    color: var(--white);
 }
 
 #showcase .showcase-content {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    padding: 0 2rem;
 }
